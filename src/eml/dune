@@ -4,9 +4,12 @@
  (name main)
  (modules main)
  (libraries eml)
- (instrumentation (backend bisect_ppx)))
+ (instrumentation
+  (backend bisect_ppx)))
 
 (library
  (name eml)
  (modules eml)
- (instrumentation (backend bisect_ppx)))
+ (libraries camlp-streams)
+ (instrumentation
+  (backend bisect_ppx)))
